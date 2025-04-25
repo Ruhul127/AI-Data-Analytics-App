@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analytics Tool with AI Insights</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <!-- Theme toggle button -->
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon" id="themeIcon"></i>
+    </button>
+
+    <!-- Confirmation dialog -->
+    <div class="dialog-overlay" id="confirmDialog">
+        <div class="dialog">
+            <h3 class="dialog-title" id="dialogTitle">Confirm Action</h3>
+            <p class="dialog-message" id="dialogMessage">Are you sure you want to perform this action?</p>
+            <div class="dialog-buttons">
+                <button class="dialog-btn dialog-btn-confirm" id="dialogConfirm">Confirm</button>
+                <button class="dialog-btn dialog-btn-cancel" id="dialogCancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Data Analytics Dashboard</h1>
+            <p class="subtitle">Upload your dataset to get powerful analytics and AI-generated insights in seconds</p>
+        </header>
+
+        <div class="card">
+            <h2 class="card-title"><i class="fas fa-cloud-upload-alt"></i> Upload Your Dataset</h2>
+            
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-icon">
+                    <i class="fas fa-file-import"></i>
+                </div>
+                <p class="upload-text">Drag & drop your file here or <strong>browse</strong> your files</p>
+                <input type="file" id="fileInput" accept=".csv,.xlsx">
+                <label for="fileInput" class="file-label">
+                    <i class="fas fa-folder-open"></i> Choose File
+                </label>
+                <div id="fileName">No file selected</div>
+            </div>
+            
+            <div class="model-selector">
+                <label for="modelSelect">AI Model:</label>
+                <select id="modelSelect">
+                    <option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
+                    <option value="gpt-4">GPT-4 (if available)</option>
+                </select>
+            </div>
+            
+            <button id="analyzeBtn" class="btn">
+                <i class="fas fa-chart-line"></i> Analyze Data
+            </button>
+            
+            <div id="status" class="status" style="display: none;"></div>
+        </div>
+
+        <div class="results" id="results">
+            <div class="card">
+                <h2 class="card-title"><i class="fas fa-chart-pie"></i> Analysis Results</h2>
+                
+                <div id="summary">
+                    <div class="section">
+                        <h3 class="section-title"><i class="fas fa-info-circle"></i> Dataset Overview</h3>
+                        <div id="statsGrid" class="stats-grid"></div>
+                    </div>
+                    
+                    <div class="section">
+                        <h3 class="section-title"><i class="fas fa-table"></i> Numeric Summary</h3>
+                        <div id="numericSummary"></div>
+                    </div>
+                </div>
+                
+                <div id="visualizations" class="section">
+                    <h3 class="section-title"><i class="fas fa-chart-bar"></i> Visualizations</h3>
+                    <div id="visualizationsContent"></div>
+                </div>
+                
+                <div id="aiInsights" class="section">
+                    <h3 class="section-title"><i class="fas fa-robot"></i> AI Insights</h3>
+                    <div id="aiInsightsContent"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
