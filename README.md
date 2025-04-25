@@ -1,6 +1,6 @@
 # 📊 Data Analytics Dashboard with AI Insights
 
-A Flask-powered web app for instant data analysis, visualizations, and AI-generated insights — upload a dataset and uncover hidden stories in your data effortlessly.
+A Flask-powered web app for instant data analysis, visualisations, and AI-generated insights — upload a dataset and uncover hidden stories in your data effortlessly.
 
 ![Dashboard Preview](Data_Analytics_App/Assets/Example1.PNG)
 
@@ -10,7 +10,7 @@ A Flask-powered web app for instant data analysis, visualizations, and AI-genera
 
 - **📂 Upload CSV or Excel files (max 5MB)**
 - **📈 Auto-generated data analysis**
-- **📊 Automatic visualizations**
+- **📊 Automatic visualisations**
 - **🧠 AI-powered data insights**
 - **🌓 Responsive UI with Dark/Light mode**
 - **🔒 Local database for logging**
@@ -133,10 +133,10 @@ Displays automatic generation of dataset stats: row count, column count, missing
 
 ---
 
-### 📊 Visualizations
+### 📊 Visualisations
 Shows histograms (or other plots) automatically created for numeric columns — all labeled and readable.
 
-![Visualizations](Data_Analytics_App/Assets/Example5.PNG)
+![Visualisations](Data_Analytics_App/Assets/Example5.PNG)
 
 ---
 
